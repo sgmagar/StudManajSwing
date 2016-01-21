@@ -1,6 +1,5 @@
 package com.javastud.studmproj;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -29,6 +28,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.swing.ImageIcon;
+import org.jdesktop.swingx.prompt.PromptSupport;
 
 public class StudentManagement extends JFrame {
 
@@ -104,7 +104,7 @@ public class StudentManagement extends JFrame {
 				switchToLoginScreen();
 			}
 		});
-		btnLogOff.setIcon(new ImageIcon("D:\\Java-sts\\StudMgmtProject\\src\\logout.png"));
+		btnLogOff.setIcon(new ImageIcon("G:\\Java Projects\\123NEW JAVA PROJECTS\\swing\\StudentManagementSystem\\logout.png"));
 		btnLogOff.setBounds(691, 15, 46, 42);
 		panel_1.add(btnLogOff);
 		
@@ -180,6 +180,7 @@ public class StudentManagement extends JFrame {
 		if (lblDateOfBirth == null) {
 			lblDateOfBirth = new JLabel("Date of Birth");
 			lblDateOfBirth.setBounds(251, 71, 76, 14);
+     
 		}
 		return lblDateOfBirth;
 	}
@@ -188,6 +189,7 @@ public class StudentManagement extends JFrame {
 			txtDateOfBirth = new JTextField();
 			txtDateOfBirth.setBounds(328, 68, 162, 20);
 			txtDateOfBirth.setColumns(10);
+                        PromptSupport.setPrompt("yyyy-mm-dd",txtDateOfBirth);
 		}
 		return txtDateOfBirth;
 	}
